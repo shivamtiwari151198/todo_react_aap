@@ -13,14 +13,14 @@ const Edituser = () => {
     console.log("key", key);
     console.log("_id", _id);
     console.log("e", e.target.innerHTML);
-    axios.put("http://localhost:3003", payload).then((res) => {
+    axios.put("http://3.6.55.154:3003/", payload).then((res) => {
       getusers();
     });
   };
   function getusers() {
     try {
       axios
-        .get("http://localhost:3003")
+        .get("http://3.6.55.154:3003/")
         .then((res) => {
           console.log(res);
           setUser(res.data.data);

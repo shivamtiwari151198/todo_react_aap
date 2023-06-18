@@ -13,7 +13,7 @@ const Adduser = () => {
         userName,
         mobile,
     };
-    axios.post("http://localhost:3003",payload).then((res)=>{
+    axios.post("http://3.6.55.154:3003/",payload).then((res)=>{
         console.log(res);
         setUserName("");
         setMobile("");

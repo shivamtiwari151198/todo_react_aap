@@ -9,7 +9,7 @@ const Homepage = () => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:3003")
+      .get("http://3.6.55.154:3003/")
       .then((res) => {
         console.log(res);
         setUser(res.data.data);
@@ -25,7 +25,7 @@ const Homepage = () => {
       _id,
     };
     axios
-      .delete("http://localhost:3003", { data: payload })
+      .delete("http://3.6.55.154:3003/", { data: payload })
       .then((res) => setflag(!flag)).catch((error) => {console.log(error);});
   };
 
